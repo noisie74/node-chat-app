@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
     console.log('createMessage', message);
     io.emit('newMessage', generateMessage(message.from, message.text));
     // socket.broadcast.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
-    callback('This is from the server');
+    callback();
   });
 
   socket.on('createLocationMessage', (coords) => {
